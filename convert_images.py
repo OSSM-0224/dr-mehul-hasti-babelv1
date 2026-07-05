@@ -5,8 +5,9 @@ import shutil
 
 register_heif_opener()
 
-root = Path('assets')
-public = Path('client/public')
+base_dir = Path(__file__).resolve().parent
+root = base_dir / 'client' / 'assets'
+public = base_dir / 'client' / 'public'
 images_dir = public / 'images'
 images_dir.mkdir(parents=True, exist_ok=True)
 
