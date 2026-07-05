@@ -5,17 +5,18 @@ import {
   errorInterceptor,
 } from "./interceptors.js";
 
+const apiBaseUrl =
+  import.meta.env.VITE_API_URL || "https://dr-mehul-hasti-babelv1.vercel.app";
 
 const apiInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: apiBaseUrl,
   timeout: 15000,
   headers: {
     "Content-Type": "application/json",
   },
 });
-console.log(import.meta.env.VITE_API_URL);
+
 apiInstance.interceptors.request.use(requestInterceptor);
 apiInstance.interceptors.response.use(responseInterceptor, errorInterceptor);
-
 
 export default apiInstance;
