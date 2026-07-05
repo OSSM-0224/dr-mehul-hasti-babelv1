@@ -1,0 +1,15 @@
+export const API_ENDPOINTS = {
+  APPOINTMENTS: "/api/appointments",
+  CONTACT: "/api/contact",
+  TREATMENTS: "/api/static/treatments",
+  TEAM: "/api/static/team",
+  TESTIMONIALS: "/api/static/testimonials",
+  STATISTICS: "/api/static/statistics",
+  FEATURES: "/api/static/features",
+  STEPS: "/api/static/steps",
+  BLOGS: "/api/static/blogs",
+  GALLERY: "/api/static/gallery",
+  BRANCHES: "/api/static/branches",
+  FAQS: "/api/static/faqs",
+  TECHNOLOGY: "/api/static/technology",
+};

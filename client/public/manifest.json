@@ -1,0 +1,18 @@
+{
+  "short_name": "UniqueDental",
+  "name": "Unique Dental Care - Luxury Cosmetic Dentistry",
+  "description": "Premium painless cosmetic smile designs & computer-guided implants by Dr. Mehul Hasti Babel MDS.",
+  "icons": [
+    {
+      "src": "/uniquedental1.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#005B96",
+  "display": "standalone",
+  "orientation": "portrait"
+}

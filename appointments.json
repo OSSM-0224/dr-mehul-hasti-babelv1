@@ -1,0 +1,24 @@
+[
+	{
+		"id": "appt_1_" ,
+		"name": "Meera Deshmukh",
+		"email": "meera.deshmukh@gmail.com",
+		"phone": "+91 98200 12345",
+		"date": "2026-06-05",
+		"timeSlot": "11:00 AM",
+		"treatmentId": 1,
+		"notes": "Trial fitting of first-set custom ceramic dental veneers",
+		"createdAt": "2026-05-01T10:00:00.000Z"
+	},
+	{
+		"id": "appt_2_",
+		"name": "Rahul Sharma",
+		"email": "sharma.rahul90@gmail.com",
+		"phone": "+91 98111 88222",
+		"date": "2026-06-08",
+		"timeSlot": "02:00 PM",
+		"treatmentId": 3,
+		"notes": "Pre-prepared CAD crown ready for cementation",
+		"createdAt": "2026-05-18T09:30:00.000Z"
+	}
+]
