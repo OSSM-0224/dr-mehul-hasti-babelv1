@@ -4,18 +4,21 @@ import cors from "cors";
 import { createServer as createViteServer } from "vite";
 import { initDatabase } from "./database/jsonDb.js";
 import { apiRouter } from "./routes/index.js";
-import { serverConfig } from "./config/index.js";
+import { envConfig, serverConfig } from "./config/index.js";
 
 export async function createApp() {
   const app = express();
   app.use(express.json());
 
+  const allowedOrigins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    envConfig.CLIENT_URL,
+    "https://dr-mehul-hasti-babelv1-backend.onrender.com",
+  ].filter(Boolean) as string[];
+
   app.use(cors({
-    origin: [
-      "http://localhost:5173",
-      "https://dr-mehul-hasti-babelv1.vercel.app",
-      "https://dr-mehul-hasti-babelv1-backend.onrender.com",
-    ],
+    origin: allowedOrigins,
     credentials: true,
   }))
 

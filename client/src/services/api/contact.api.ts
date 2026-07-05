@@ -2,7 +2,7 @@ import { ContactMessage } from "@/src/types/index.js";
 
 export const contactApi = {
   getMessages: async (): Promise<ContactMessage[]> => {
-    const base = import.meta.env.VITE_API_URL || "";
+    const base = import.meta.env.VITE_API_URL || "https://dr-mehul-hasti-babelv1-backend.onrender.com";
     const response = await fetch(`${base}/api/contact`);
     if (!response.ok) {
       throw new Error("Failed to fetch contact messages");
@@ -11,7 +11,7 @@ export const contactApi = {
   },
 
   submitMessage: async (message: ContactMessage): Promise<{ success: boolean; message: ContactMessage }> => {
-    const base = import.meta.env.VITE_API_URL || "";
+    const base = import.meta.env.VITE_API_URL || "https://dr-mehul-hasti-babelv1-backend.onrender.com";
     const response = await fetch(`${base}/api/contact`, {
       method: "POST",
       headers: {

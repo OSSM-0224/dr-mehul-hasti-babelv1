@@ -15,7 +15,7 @@ export {
 // Backward compatibility object
 export const config = {
   PORT: envConfig.PORT,
-  NODE_ENV: envConfig.PORT,
+  NODE_ENV: envConfig.NODE_ENV,
   APPOINTMENTS_FILE: databaseConfig.appointmentsFile,
   MESSAGES_FILE: databaseConfig.messagesFile,
   API_PREFIX: serverConfig.apiPrefix,

@@ -2,7 +2,7 @@ import { Appointment } from "@/src/types/index.js";
 
 export const appointmentApi = {
   getAppointments: async (): Promise<Appointment[]> => {
-    const base = import.meta.env.VITE_API_URL || "";
+    const base = import.meta.env.VITE_API_URL || "https://dr-mehul-hasti-babelv1-backend.onrender.com";
     const response = await fetch(`${base}/api/appointments`);
     if (!response.ok) {
       throw new Error("Failed to fetch appointments");
@@ -11,7 +11,7 @@ export const appointmentApi = {
   },
 
   createAppointment: async (appointment: Appointment): Promise<{ success: boolean; appointment: Appointment }> => {
-    const base = import.meta.env.VITE_API_URL || "";
+    const base = import.meta.env.VITE_API_URL || "https://dr-mehul-hasti-babelv1-backend.onrender.com";
     const response = await fetch(`${base}/api/appointments`, {
       method: "POST",
       headers: {
@@ -27,7 +27,7 @@ export const appointmentApi = {
   },
 
   deleteAppointment: async (id: string): Promise<{ success: boolean; message: string }> => {
-    const base = import.meta.env.VITE_API_URL || "";
+    const base = import.meta.env.VITE_API_URL || "https://dr-mehul-hasti-babelv1-backend.onrender.com";
     const response = await fetch(`${base}/api/appointments/${id}`, {
       method: "DELETE",
     });
