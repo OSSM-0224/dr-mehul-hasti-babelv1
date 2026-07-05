@@ -6,7 +6,7 @@ async function bootstrap() {
   
   app.listen(serverConfig.port, "0.0.0.0", () => {
     console.log(
-      `[Server] Unique Dental Care running on http://localhost:${serverConfig.port} in ${serverConfig.nodeEnv} mode`
+      `[Server] Unique Dental Care running on port ${serverConfig.port} in ${serverConfig.nodeEnv} mode`
     );
   });
 }

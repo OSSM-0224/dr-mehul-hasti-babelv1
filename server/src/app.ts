@@ -11,10 +11,7 @@ export async function createApp() {
   app.use(express.json());
 
   app.use(cors({
-    origin: [
-      "http://localhost:5173",
-      "https://dr-mehul-hasti-babelv1.vercel.app",
-    ],
+    origin: "https://dr-mehul-hasti-babelv1.vercel.app",
     credentials: true,
   }))
 
