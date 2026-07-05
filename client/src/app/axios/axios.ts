@@ -6,7 +6,7 @@ import {
 } from "./interceptors.js";
 
 const apiBaseUrl =
-  import.meta.env.VITE_API_URL || "https://dr-mehul-hasti-babelv1-backend.onrender.com";
+  import.meta.env.VITE_API_URL || "http://localhost:3000";
 
 const apiInstance = axios.create({
   baseURL: apiBaseUrl,
