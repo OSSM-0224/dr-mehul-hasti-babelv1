@@ -58,7 +58,6 @@
     "autoprefixer": "^10.4.21",
     "esbuild": "^0.25.0",
     "eslint": "^10.7.0",
-    "eslint-config-standard-with-typescript": "^41.0.0",
     "eslint-plugin-import": "^2.0.0",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
