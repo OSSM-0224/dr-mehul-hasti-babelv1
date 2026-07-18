@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { COLORS } from "@/src/features/shared/constants/colors";
@@ -10,16 +10,19 @@ interface HeaderProps {
   onOpenWhatsAppModal: () => void;
 }
 
-export default function Header({ onOpenBookingModal, onOpenWhatsAppModal }: HeaderProps) {
+export default function Header({
+  onOpenBookingModal,
+  onOpenWhatsAppModal,
+}: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const { 
-    isDentalTourismOpen, 
+  const {
+    isDentalTourismOpen,
     setIsDentalTourismOpen,
     isLocationsOpen,
     setIsLocationsOpen,
-    selectedBranch
+    selectedBranch,
   } = useApp();
 
   useEffect(() => {
@@ -42,7 +45,14 @@ export default function Header({ onOpenBookingModal, onOpenWhatsAppModal }: Head
       setActiveSection("locations");
     } else {
       // Fallback to active section when modal is closed
-      const sections = ["home", "about", "treatments", "technologies", "team", "contact"];
+      const sections = [
+        "home",
+        "about",
+        "treatments",
+        "technologies",
+        "team",
+        "contact",
+      ];
       for (const id of sections) {
         const el = document.getElementById(id);
         if (el) {
@@ -61,9 +71,16 @@ export default function Header({ onOpenBookingModal, onOpenWhatsAppModal }: Head
     if (isDentalTourismOpen || isLocationsOpen) return;
 
     const handleScroll = () => {
-      const sections = ["home", "about", "treatments", "technologies", "team", "contact"];
+      const sections = [
+        "home",
+        "about",
+        "treatments",
+        "technologies",
+        "team",
+        "contact",
+      ];
       let currentActive = "home";
-      
+
       for (const id of sections) {
         const el = document.getElementById(id);
         if (el) {
@@ -87,7 +104,11 @@ export default function Header({ onOpenBookingModal, onOpenWhatsAppModal }: Head
     if (id === "tourism") {
       setIsLocationsOpen(false);
       setIsDentalTourismOpen(true);
-      window.history.pushState(null, "", `/dental-tourism?branch=${selectedBranch}`);
+      window.history.pushState(
+        null,
+        "",
+        `/dental-tourism?branch=${selectedBranch}`,
+      );
       return;
     }
     if (id === "locations") {
@@ -101,7 +122,11 @@ export default function Header({ onOpenBookingModal, onOpenWhatsAppModal }: Head
     setIsDentalTourismOpen(false);
     setIsLocationsOpen(false);
 
-    if (window.location.pathname === "/locations" || window.location.pathname === "/locations/" || window.location.pathname.startsWith("/dental-tourism")) {
+    if (
+      window.location.pathname === "/locations" ||
+      window.location.pathname === "/locations/" ||
+      window.location.pathname.startsWith("/dental-tourism")
+    ) {
       window.history.pushState(null, "", "/");
     }
 
@@ -151,33 +176,27 @@ export default function Header({ onOpenBookingModal, onOpenWhatsAppModal }: Head
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 w-full h-full">
         {/* Three Column Structure Container (Flexbox with a growing center section) */}
         <div className="flex justify-between items-center h-full w-full gap-4">
-          
           {/* Column 1: Logo & Fallback (Always Left-aligned, shrink-0 to prevent compression) */}
           <div className="flex items-center justify-start z-10 select-none shrink-0">
             <div
               onClick={() => scrollToSection("home")}
-              className="flex items-center gap-3 cursor-pointer group text-left h-12 shrink-0 min-w-fit"
+              className="flex items-center gap-4 cursor-pointer group"
             >
-              <img
-                src="/logos/uniquedentalcare.png"
-                alt="Unique Dental Care Logo"
-                className="h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-102 shrink-0"
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                  const fallback = document.getElementById("logo-text-fallback");
-                  if (fallback) {
-                    fallback.classList.remove("hidden");
-                    fallback.classList.add("flex");
-                  }
-                }}
-              />
-              <div id="logo-text-fallback" className="hidden flex-col justify-center h-12 shrink-0 min-w-fit">
-                <span className="font-playfair font-bold text-lg sm:text-xl tracking-tight text-slate-900 group-hover:text-[#005B96] transition-colors leading-none whitespace-nowrap">
+              <div className="bg-white border border-slate-200 rounded-xl px-4 py-2 shadow-sm hover:shadow-md transition-all duration-300">
+                <img
+                  src="/logos/uniquedentalcare.png"
+                  alt="Unique Dental Care Logo"
+                  className="h-14 w-auto object-contain"
+                />
+              </div>
+
+              <div>
+                <h2 className="font-playfair font-bold text-xl text-slate-900">
                   Unique Dental Care
-                </span>
-                <span className="block text-[9px] uppercase font-semibold tracking-widest text-slate-400 leading-none mt-1 whitespace-nowrap">
-                  Luxury & Cosmetic Dentistry
-                </span>
+                </h2>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-slate-500">
+                  Committed To The Precision
+                </p>
               </div>
             </div>
           </div>
@@ -191,16 +210,17 @@ export default function Header({ onOpenBookingModal, onOpenWhatsAppModal }: Head
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   className={`relative font-inter font-medium text-[12px] xl:text-[12.5px] 2xl:text-[13px] tracking-wide transition-all duration-300 cursor-pointer flex items-center justify-center px-2 xl:px-2.5 2xl:px-3.5 h-9 rounded-full leading-none border-0 bg-transparent whitespace-nowrap shrink-0
-                    ${isActive 
-                      ? "text-[#005B96] font-semibold" 
-                      : "text-slate-600 hover:text-[#005B96]"
+                    ${
+                      isActive
+                        ? "text-[#005B96] font-semibold"
+                        : "text-slate-600 hover:text-[#005B96]"
                     }
                     group/nav
                   `}
                 >
                   <span>{item.label}</span>
                   {/* Exquisite Underline Slider Effect */}
-                  <span 
+                  <span
                     className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-[#005B96]/90 transition-all duration-300 rounded-full
                       ${isActive ? "w-6 opacity-100" : "w-0 opacity-0 group-hover/nav:w-4 group-hover/nav:opacity-100"}
                     `}
@@ -218,7 +238,9 @@ export default function Header({ onOpenBookingModal, onOpenWhatsAppModal }: Head
               style={{ backgroundColor: COLORS.secondary }}
             >
               <Phone size={14} weight="bold" className="shrink-0" />
-              <span className="leading-none whitespace-nowrap">WhatsApp Chat</span>
+              <span className="leading-none whitespace-nowrap">
+                WhatsApp Chat
+              </span>
             </button>
             <button
               onClick={onOpenBookingModal}
@@ -226,7 +248,9 @@ export default function Header({ onOpenBookingModal, onOpenWhatsAppModal }: Head
               style={{ backgroundColor: COLORS.primary }}
             >
               <Calendar size={14} weight="bold" className="shrink-0" />
-              <span className="leading-none whitespace-nowrap">Book Appointment</span>
+              <span className="leading-none whitespace-nowrap">
+                Book Appointment
+              </span>
             </button>
           </div>
 

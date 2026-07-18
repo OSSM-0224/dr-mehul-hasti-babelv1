@@ -88,49 +88,6 @@ export const dentalTourismContent: Record<"chembur" | "mankhurd", DentalTourismB
     conciergeLocationText: "MANKHURD, MUMBAI",
     conciergeDescription: "Located in Mankhurd, our modern clinical facility offers convenient access to major transit links, premier business accommodations, and state-of-the-art diagnostic imaging suites.",
     conciergeHotelDetails: "Enjoy access to premium business class hotels near Mankhurd, with spacious suites, tailored high-protein dietary plans, and private chauffeur-driven recovery commutes.",
-    gallery: [
-      {
-        id: 1,
-        filename: "/images/mankhurd1.png",
-        title: "Mankhurd Advanced Surgical Wing",
-        description: "Our high-precision surgical theater in Mankhurd featuring specialized digital diagnostic imaging, ergonomic comfort chairs, and ambient climate controls.",
-        category: "Suite Tour"
-      },
-      {
-        id: 2,
-        filename: "/images/mankhurd2.png",
-        title: "Digital Orthopantomogram (OPG) Bay",
-        description: "The dedicated digital scanning bay in Mankhurd, rendering full-mouth structural 3D bone mapping with minimal radiation exposure.",
-        category: "Technology"
-      },
-      {
-        id: 3,
-        filename: "/images/mankhurd3.png",
-        title: "Mankhurd Pure-Air Sterilization Hub",
-        description: "Pristine clinical processing hub fitted with high-frequency autoclaves and computerized material tracing systems to ensure absolute zero-risk sterile environments.",
-        category: "Hygiene"
-      },
-      {
-        id: 4,
-        filename: "/images/mankhurd4.png",
-        title: "Mankhurd Modern Operatory B",
-        description: "Our secondary multi-purpose operatory suite designed for expedited single-sitting microscopic endodontics and bite corrections.",
-        category: "Clinic Tour"
-      },
-      {
-        id: 5,
-        filename: "/images/mankhurd5.png",
-        title: "Mankhurd Diagnostic Lounge",
-        description: "Cozy clinical waiting vestibule featuring deep navy lounge chairs and integrated tea service, providing a comforting start to your clinical sessions.",
-        category: "Consultation"
-      },
-      {
-        id: 6,
-        filename: "/images/mankhurd6.png",
-        title: "Mankhurd SMILE Design Space",
-        description: "A private digital consultation room where patient parameters are mapped to custom e.max veneers using advanced design software.",
-        category: "Consultation"
-      }
-    ]
+    gallery: []
   }
 };
