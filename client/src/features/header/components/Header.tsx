@@ -182,12 +182,14 @@ export default function Header({
               onClick={() => scrollToSection("home")}
               className="flex items-center gap-4 cursor-pointer group"
             >
-              <div className="bg-white border border-slate-200 rounded-xl px-4 py-2 shadow-sm hover:shadow-md transition-all duration-300">
-                <img
-                  src="/logos/uniquedentalcare.png"
-                  alt="Unique Dental Care Logo"
-                  className="h-14 w-auto object-contain"
-                />
+              <div className="relative w-16 h-16 rounded-full p-[2px] bg-gradient-to-br from-sky-200 via-sky-50 to-amber-100 shadow-[0_2px_10px_rgba(15,23,42,0.08)] transition-all duration-300 group-hover:shadow-[0_4px_20px_rgba(56,189,248,0.25)] group-hover:scale-105">
+                <div className="w-full h-full rounded-full bg-white border border-white/60 shadow-inner flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/logos/uniquedentalcare.png"
+                    alt="Logo"
+                    className="h-9 w-auto object-contain"
+                  />
+                </div>
               </div>
 
               <div>
