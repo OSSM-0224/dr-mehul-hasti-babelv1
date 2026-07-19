@@ -17,7 +17,7 @@ export default function TeamGrid() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
-          <span className="text-sm font-bold tracking-wider uppercase text-secondary font-inter text-[#00A8E8]">
+          <span className="text-sm font-bold tracking-wider uppercase font-inter bg-gradient-to-r from-[#00A8E8] to-[#005B96] bg-clip-text text-transparent">
             CLINICAL SPECIALISTS & LEADERS
           </span>
           <h2 className="font-playfair font-bold text-3xl sm:text-4xl text-slate-900 leading-tight">
