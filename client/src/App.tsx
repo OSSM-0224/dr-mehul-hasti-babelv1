@@ -124,12 +124,6 @@ function MainLayout() {
         {/* 9. Appointment Booking Workflow info */}
         <HowItWorks />
 
-        {/* Clinical Patient Queue Dashboard (Redesigned with shadcn cards) */}
-        <section className="py-16 bg-white border-t border-b border-slate-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <AppointmentsManager />
-          </div>
-        </section>
 
         {/* 10. FAQ Section */}
         <FAQSection />
