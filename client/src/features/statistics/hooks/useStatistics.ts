@@ -1,25 +1,10 @@
-import { useEffect, useCallback } from "react";
-import { useAppDispatch, useAppSelector } from "../../../app/store/hooks.js";
-import { fetchStatistics } from "../slice/statistics.slice.js";
+import { STATS } from "@/src/features/shared/constants/constants";
 
 export function useStatistics() {
-  const dispatch = useAppDispatch();
-  const { items, loading, error } = useAppSelector((state) => state.statistics);
-
-  const getStatisticsList = useCallback(() => {
-    dispatch(fetchStatistics());
-  }, [dispatch]);
-
-  useEffect(() => {
-    if (items.length === 0) {
-      getStatisticsList();
-    }
-  }, [items.length, getStatisticsList]);
-
   return {
-    statistics: items,
-    loading,
-    error,
-    getStatisticsList,
+    statistics: STATS,
+    loading: false,
+    error: null,
+    getStatisticsList: () => {},
   };
 }

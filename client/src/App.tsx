@@ -17,8 +17,7 @@ import { TechEquipment } from "./features/tech/index.js";
 import { SmileGallery } from "./features/gallery/index.js";
 import { FAQSection } from "./features/faq/index.js";
 
-// Modals & Interactive dashboards
-import { BookingModal, AppointmentsManager } from "./features/appointments/index.js";
+// Modals & Overlays
 import { WhatsAppModal } from "./features/whatsapp-chat/index.js";
 import { DentalTourismPage } from "./features/dental-tourism/index.js";
 import { LocationsPage } from "./features/locations/index.js";
@@ -28,9 +27,6 @@ import { store } from "./app/store/store.js";
 
 function MainLayout() {
   const {
-    isBookingModalOpen,
-    closeBookingModal,
-    openBookingModal,
     isWhatsAppModalOpen,
     openWhatsAppModal,
     closeWhatsAppModal,
@@ -38,10 +34,13 @@ function MainLayout() {
     setIsDentalTourismOpen,
     isLocationsOpen,
     setIsLocationsOpen,
-    preselectedTreatmentId,
     selectedBranch,
     setSelectedBranch,
   } = useApp();
+
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const handleViewServices = () => {
     const treatmentsSection = document.getElementById("treatments");
@@ -85,20 +84,20 @@ function MainLayout() {
     <div className="min-h-screen flex flex-col bg-slate-50 font-inter antialiased selection:bg-[#00A8E8] selection:text-white">
       {/* Header and Fixed Navigation */}
       <Header
-        onOpenBookingModal={() => openBookingModal()}
+        onOpenBookingModal={scrollToContact}
         onOpenWhatsAppModal={openWhatsAppModal}
       />
 
       <main className="flex-grow">
         {/* 1. Premium Hero Section */}
         <Hero
-          onOpenBookingModal={() => openBookingModal()}
+          onOpenBookingModal={scrollToContact}
           onOpenWhatsAppModal={openWhatsAppModal}
           onViewServices={handleViewServices}
         />
 
         {/* 2. About Clinic */}
-        <About onOpenBookingModal={() => openBookingModal()} />
+        <About onOpenBookingModal={scrollToContact} />
 
         {/* Statistics highlights directly integrated under About */}
         <StatisticsSection />
@@ -107,7 +106,7 @@ function MainLayout() {
         <WhyChooseUs />
 
         {/* 4. Services Section */}
-        <TreatmentSection onOpenBookingModal={() => openBookingModal()} />
+        <TreatmentSection onOpenBookingModal={scrollToContact} />
 
         {/* 5. Meet Our Doctors */}
         <Team />
@@ -135,19 +134,11 @@ function MainLayout() {
       {/* 14. Footer */}
       <Footer />
 
-      {/* Floating Appointment Booking Drawer Modal */}
-      <BookingModal
-        isOpen={isBookingModalOpen}
-        onClose={closeBookingModal}
-        preselectedTreatmentId={preselectedTreatmentId}
-        onBookingSuccess={() => {}}
-      />
-
       {/* WhatsApp Simulated Interactive Chat Modal */}
       <WhatsAppModal
         isOpen={isWhatsAppModalOpen}
         onClose={closeWhatsAppModal}
-        onOpenBookingModal={() => openBookingModal()}
+        onOpenBookingModal={scrollToContact}
       />
 
       {/* Dental Tourism Page overlay */}
@@ -160,7 +151,7 @@ function MainLayout() {
             window.history.pushState(null, "", "/");
           }
         }}
-        onOpenBookingModal={openBookingModal}
+        onOpenBookingModal={scrollToContact}
         onOpenWhatsAppModal={openWhatsAppModal}
       />
 
@@ -173,11 +164,7 @@ function MainLayout() {
             window.history.pushState(null, "", "/");
           }
         }}
-        onOpenBookingModal={(branchDatabaseId) => {
-          // If a specific branch is booked, open booking modal
-          // branchDatabaseId corresponds to preselected branch in booking systems
-          openBookingModal(branchDatabaseId);
-        }}
+        onOpenBookingModal={scrollToContact}
       />
     </div>
   );

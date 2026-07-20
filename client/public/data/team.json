@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Mehul Hasti Babel",
+    "title": "BDS, MDS – Oral & Maxillofacial Surgery",
+    "specialty": "Cosmetic Dentist & Implantologist",
+    "bio": "Dr. Mehul Hasti Babel is the founder and chief dentist of Unique Dental Care with over 15 years of experience in advanced cosmetic dentistry, full-mouth rehabilitation, and computer-guided implantology. His precision-driven approach and artistry in smile design have transformed thousands of smiles across Mumbai.",
+    "education": [
+      "BDS – Government Dental College, Mumbai",
+      "MDS – Oral & Maxillofacial Surgery",
+      "Fellowship in Cosmetic Dentistry (USA)",
+      "Certified Invisalign Provider"
+    ],
+    "imageUrl": "/images/dr-mehul.png"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Saloni Mehul Hasti",
+    "title": "BDS, MDS – Conservative Dentistry & Endodontics",
+    "specialty": "Family & Cosmetic Dentist",
+    "bio": "Dr. Saloni Mehul Hasti brings warmth and expertise to every patient interaction. Specialising in preventive dentistry, aesthetic restorations, and painless root canal treatments, she ensures every family member—from children to seniors—receives compassionate, world-class dental care.",
+    "education": [
+      "BDS – Nair Hospital Dental College, Mumbai",
+      "MDS – Conservative Dentistry & Endodontics",
+      "Certified in Aesthetic Dentistry",
+      "Paediatric Dental Care Specialist"
+    ],
+    "imageUrl": "/images/dr-saloni.png"
+  }
+]

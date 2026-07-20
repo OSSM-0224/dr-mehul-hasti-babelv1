@@ -1,5 +1,4 @@
-export { useAppointments } from "./useAppointments.js";
-export { useBooking } from "./useBooking.js";
+
 export { useContact } from "./useContact.js";
 export { useGallery } from "./useGallery.js";
 export { useToast } from "./useToast.js";

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Mankhurd",
+    "address": "Shop No. 3, Ground Floor, New Janta Nagar, Mankhurd, Mumbai - 400043",
+    "phone": "+91 98200 12345",
+    "email": "mankhurd@uniquedentalcare.in",
+    "timings": "Mon–Sat: 10:00 AM – 2:00 PM & 5:00 PM – 9:00 PM\nSunday: 10:00 AM – 2:00 PM",
+    "mapsUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d120681.16804000596!2d72.931934!3d19.051137!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c73d9deb1b17%3A0xcabc7277a44a4c94!2sUNIQUE%20DENTAL%20CARE!5e0!3m2!1sen!2sin!4v1780401355164!5m2!1sen!2sin"
+  },
+  {
+    "id": 2,
+    "name": "Chembur",
+    "address": "Shop No. 7, Sai Darshan CHS, Sindhi Society, Chembur, Mumbai - 400071",
+    "phone": "+91 98200 67890",
+    "email": "chembur@uniquedentalcare.in",
+    "timings": "Mon–Sat: 10:00 AM – 2:00 PM & 5:00 PM – 9:00 PM\nSunday: Closed",
+    "mapsUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.116761385384!2d72.8954972!3d19.058603299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c2658754e5%3A0x59264c68f4384608!2sUnique%20Dental%20Care%20-%20Dr.%20Saloni%20%26%20Dr.%20Mehul%20Babel!5e0!3m2!1sen!2sin!4v1782913881617!5m2!1sen!2sin"
+  }
+]

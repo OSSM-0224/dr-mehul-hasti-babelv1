@@ -1,4 +1,4 @@
-import { Treatment, TeamMember, Testimonial, BlogPost, StatItem, FeatureItem, StepItem } from "@/src/types";
+import { Treatment, TeamMember, Testimonial, BlogPost, StatItem, FeatureItem, StepItem, FAQItem, TechItem } from "@/src/types";
 
 export const TREATMENTS: Treatment[] = [
   {
@@ -486,6 +486,102 @@ export const CLINIC_BRANCHES = [
     phone: "+91 91361 74840",
     email: "care@uniquedentalcare.in",
     timings: "Tue - Sun: 10:00 AM - 8:00 PM"
+  }
+];
+
+export const TECHNOLOGIES: TechItem[] = [
+  {
+    id: 1,
+    title: "Carl Zeiss Dental Microscope",
+    specs: "OPMI Pico • 20x Magnification",
+    clinicalUse: "High-magnification surgical visualization enables the dentist to see even microscopic cracks, accessory root canals, and early caries that are completely invisible to the naked eye.",
+    imageUrl: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600&h=400"
+  },
+  {
+    id: 2,
+    title: "3D CBCT Imaging Scanner",
+    specs: "Carestream CS 8100 • Low Dose",
+    clinicalUse: "A low-radiation 3D cone-beam CT captures the entire jaw, nerve paths, and bone density in a 20-second scan — essential for precise implant placement and surgical planning.",
+    imageUrl: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=600&h=400"
+  },
+  {
+    id: 3,
+    title: "TRIOS Intraoral Digital Scanner",
+    specs: "3Shape TRIOS 4 • Wireless",
+    clinicalUse: "Replaces messy traditional impressions with a 3D digital scan of your teeth. The instant STL file is sent to our in-house milling lab for same-day ceramic restorations.",
+    imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600&h=400"
+  },
+  {
+    id: 4,
+    title: "Biolase Epic X Laser",
+    specs: "WaterLase iPlus • All-Tissue",
+    clinicalUse: "A revolutionary all-tissue laser capable of performing painless root canals, gum recontouring, and ulcer treatments — all without sutures, bleeding, or vibration.",
+    imageUrl: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=600&h=400"
+  },
+  {
+    id: 5,
+    title: "Computerized Anesthesia (STA System)",
+    specs: "The Wand STA • Computer-Controlled",
+    clinicalUse: "The STA system delivers anesthetic at a precisely controlled rate, making the injection virtually painless. No more dental fear associated with needle pricks.",
+    imageUrl: "https://images.unsplash.com/photo-1579684389782-64d84b5e901a?auto=format&fit=crop&q=80&w=600&h=400"
+  },
+  {
+    id: 6,
+    title: "CAD-CAM Milling Unit",
+    specs: "Ceramill Motion 2 • 5-Axis",
+    clinicalUse: "Our in-house 5-axis milling machine produces zirconia crowns, bridges, and veneers in under 60 minutes — allowing single-visit restorations with micron-level precision.",
+    imageUrl: "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&q=80&w=600&h=400"
+  }
+];
+
+export const FAQS: FAQItem[] = [
+  {
+    id: 1,
+    question: "Is the treatment completely painless?",
+    answer: "Yes. We utilize computer-controlled anesthetic delivery (The Wand STA) which makes injections virtually pain-free. Most patients describe it as a mild pressure sensation. For laser procedures, anesthesia is often not needed at all — the laser seals nerve endings instantly.",
+    category: "General"
+  },
+  {
+    id: 2,
+    question: "How long does a typical root canal take at your clinic?",
+    answer: "A single-visit microscopic root canal takes approximately 45–60 minutes using advanced rotary files and laser sterilization. The tooth is then immediately prepared for a CAD-CAM crown, which can be fabricated the same day in our in-house lab.",
+    category: "Endodontics"
+  },
+  {
+    id: 3,
+    question: "Do you offer same-day crowns and veneers?",
+    answer: "Absolutely. Our in-house 5-axis CAD-CAM milling system (Ceramill Motion 2) produces metal-free zirconia and ceramic crowns in under 60 minutes. You walk out with a permanent restoration in a single appointment — no temporary crowns, no second visit.",
+    category: "Prosthodontics"
+  },
+  {
+    id: 4,
+    question: "What technology do you use for dental implants?",
+    answer: "We use 3D CBCT bone mapping and computer-guided surgical stents for implant placement. This allows flapless, keyhole surgery with less trauma, faster healing, and 99%+ success rates. We stock premium Swiss and German implant systems.",
+    category: "Implantology"
+  },
+  {
+    id: 5,
+    question: "Do you treat children and anxious patients?",
+    answer: "Yes. Our pediatric specialist Dr. Sushma Singh provides a welcoming, child-friendly environment. For highly anxious patients, we offer conscious sedation (nitrous oxide), laser anesthesia, and a calming clinical ambiance with noise-cancelling headphones.",
+    category: "Pediatric"
+  },
+  {
+    id: 6,
+    question: "What are your clinic sterilization protocols?",
+    answer: "We follow hospital-grade Class-B autoclave sterilization with triple vacuum cycling. Every surgical instrument is individually sealed in sterile pouches and opened in front of the patient. Our sterilization center meets international ISO standards.",
+    category: "Safety"
+  },
+  {
+    id: 7,
+    question: "How much do veneers cost?",
+    answer: "The cost depends on the material (composite bonding vs. ceramic E-max) and the number of teeth. During your free Digital Smile Design consultation, we provide a transparent 3D treatment plan with exact pricing. We also offer EMI payment options through leading partners.",
+    category: "Cosmetics"
+  },
+  {
+    id: 8,
+    question: "Do you offer emergency dental services?",
+    answer: "Yes. We provide same-day emergency appointments for severe toothaches, trauma, fractures, and infections. Our emergency WhatsApp support line is available 24/7 for immediate triage and guidance.",
+    category: "Emergency"
   }
 ];
 

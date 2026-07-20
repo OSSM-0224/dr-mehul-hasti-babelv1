@@ -3,11 +3,16 @@ import { contactApi } from "../services/api/contact.api.js";
 import { ContactMessage } from "../types/index.js";
 import { toast } from "sonner";
 
+export interface ContactPayload extends ContactMessage {
+  branch?: string;
+}
+
 export function useContact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const submitContact = async (message: ContactMessage) => {
+  const submitContact = async (message: ContactPayload) => {
+    if (isSubmitting) return false; // prevent duplicate submissions
     setIsSubmitting(true);
     setError(null);
     try {
@@ -35,3 +40,4 @@ export function useContact() {
     error,
   };
 }
+

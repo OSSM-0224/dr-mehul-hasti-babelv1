@@ -55,6 +55,7 @@ export default function ContactSection() {
       phone: formData.phone,
       subject: formData.subject,
       message: formData.message || "",
+      branch: formData.branch,
     });
 
     if (success) {

@@ -16,7 +16,6 @@ import mankhurdClinic from "/images/mankhurd1.jpg";
 import chemburClinic from "/images/chembur2.png";
 import drMehul from "/images/dr-mehul.png";
 import drSaloni from "/images/dr-saloni.png";
-import { h3 } from "framer-motion/client";
 
 interface HeroSectionProps {
   onOpenBookingModal: () => void;
@@ -97,7 +96,7 @@ function CtaButtons({
         style={{ backgroundColor: COLORS.secondary }}
       >
         <Phone size={20} weight="bold" />
-        <span>Book In Chembur</span>
+        <span>Book for Chembur</span>
       </button>
 
       <button
@@ -108,7 +107,7 @@ function CtaButtons({
           backgroundColor: COLORS.tertiary,
         }}
       >
-        <span>Book In Mankhurd</span>
+        <span>Book for Mankhurd</span>
         <ArrowRight size={18} weight="bold" />
       </button>
     </motion.div>
@@ -306,7 +305,7 @@ function ClinicShowcase() {
             </p>
 
             <button className="mt-4 bg-[#00A8E8] text-white px-4 py-2 rounded-lg">
-              Book Appointment
+              Book for Mankhurd
             </button>
           </>
         }
@@ -327,7 +326,7 @@ function ClinicShowcase() {
             <p className="text-gray-600 mt-2">Family & Cosmetic Dentist</p>
 
             <button className="mt-4 bg-[#00A8E8] text-white px-4 py-2 rounded-lg">
-              Book Appointment
+              Book for Chembur
             </button>
           </>
         }

@@ -1,25 +1,12 @@
-import { useEffect, useCallback } from "react";
-import { useAppDispatch, useAppSelector } from "../../../app/store/hooks.js";
-import { fetchGallery } from "../slice/gallery.slice.js";
+import { SMILE_GALLERY } from "@/src/features/shared/constants/constants";
+import type { GalleryItem } from "@/src/types/index.js";
 
 export function useGallery() {
-  const dispatch = useAppDispatch();
-  const { items, loading, error } = useAppSelector((state) => state.gallery);
-
-  const getGalleryList = useCallback(() => {
-    dispatch(fetchGallery());
-  }, [dispatch]);
-
-  useEffect(() => {
-    if (items.length === 0) {
-      getGalleryList();
-    }
-  }, [items.length, getGalleryList]);
-
+  const gallery = SMILE_GALLERY as GalleryItem[];
   return {
-    gallery: items,
-    loading,
-    error,
-    getGalleryList,
+    gallery,
+    loading: false,
+    error: null,
+    getGalleryList: () => {},
   };
 }

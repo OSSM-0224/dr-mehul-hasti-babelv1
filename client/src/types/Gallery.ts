@@ -1,7 +1,9 @@
 export interface GalleryItem {
   id: number;
+  title: string;
+  category: string;
+  description: string;
   beforeImg: string;
   afterImg: string;
-  title: string;
-  description: string;
+  stats: string;
 }

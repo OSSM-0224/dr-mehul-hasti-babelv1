@@ -1,25 +1,10 @@
-import { useEffect, useCallback } from "react";
-import { useAppDispatch, useAppSelector } from "../../../app/store/hooks.js";
-import { fetchBlogs } from "../slice/blog.slice.js";
+import { BLOGS } from "@/src/features/shared/constants/constants";
 
 export function useBlog() {
-  const dispatch = useAppDispatch();
-  const { items, loading, error } = useAppSelector((state) => state.blog);
-
-  const getBlogList = useCallback(() => {
-    dispatch(fetchBlogs());
-  }, [dispatch]);
-
-  useEffect(() => {
-    if (items.length === 0) {
-      getBlogList();
-    }
-  }, [items.length, getBlogList]);
-
   return {
-    blogs: items,
-    loading,
-    error,
-    getBlogList,
+    blogs: BLOGS,
+    loading: false,
+    error: null,
+    getBlogList: () => {},
   };
 }

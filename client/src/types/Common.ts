@@ -31,3 +31,11 @@ export interface StepItem {
   description: string;
   iconName: string;
 }
+
+export interface TechItem {
+  id: number;
+  title: string;
+  specs: string;
+  clinicalUse: string;
+  imageUrl: string;
+}

@@ -1,4 +1,3 @@
-export * from "./Appointment.js";
 export * from "./Doctor.js";
 export * from "./Patient.js";
 export * from "./Contact.js";
