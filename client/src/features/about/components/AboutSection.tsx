@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react";
-import { COLORS } from "@/src/features/shared/constants/colors";
+import { COLORS } from "@/src/features/shared/constants/colors.js";
 import { Trophy, ShieldCheck, Heart, Sparkle } from "@phosphor-icons/react";
 import AboutCarousel from "./AboutCarousel";
 
@@ -32,11 +32,11 @@ export default function AboutSection({ onOpenBookingModal }: AboutProps) {
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Column: Text & Awards */}
           <div className="lg:col-span-6 space-y-6 text-left">
             <div className="space-y-2">
-              <span className="text-sm font-bold tracking-wider uppercase text-secondary font-inter text-[#00A8E8]">
+              <span className="text-sm font-bold tracking-wider uppercase text-primary font-inter">
                 ABOUT UNIQUE DENTAL CARE
               </span>
               <h2 className="font-playfair font-bold text-3xl sm:text-4xl text-slate-900 leading-tight">
@@ -98,7 +98,7 @@ export default function AboutSection({ onOpenBookingModal }: AboutProps) {
           {/* Right Column: Premium Digital Infrastructure Image Carousel */}
           <div className="lg:col-span-6 space-y-6">
             <AboutCarousel />
-            
+
             {/* Carousel auxiliary trusts */}
             <div className="pt-4 border-t border-slate-100 flex items-center justify-center gap-6 text-slate-500 text-xs font-inter font-semibold">
               <div className="flex items-center gap-1.5">
