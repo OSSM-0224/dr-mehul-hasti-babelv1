@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react";
-import { COLORS } from "@/src/features/shared/constants/colors.js";
+import { COLORS } from "../../../features/shared/constants/colors";
 import { Trophy, ShieldCheck, Heart, Sparkle } from "@phosphor-icons/react";
 import AboutCarousel from "./AboutCarousel";
 
@@ -36,11 +36,11 @@ export default function AboutSection({ onOpenBookingModal }: AboutProps) {
           {/* Left Column: Text & Awards */}
           <div className="lg:col-span-6 space-y-6 text-left">
             <div className="space-y-2">
-              <span className="text-sm font-bold tracking-wider uppercase text-primary font-inter">
+              <span className="text-sm font-bold tracking-wider uppercase font-inter" style={{ color: COLORS.secondary }}>
                 ABOUT UNIQUE DENTAL CARE
               </span>
               <h2 className="font-playfair font-bold text-3xl sm:text-4xl text-slate-900 leading-tight">
-                Luxury Dentistry & Advanced Cosmetic Excellence
+                Laser Dentistry Specialist & Advanced Cosmetic Excellence
               </h2>
             </div>
 
@@ -49,7 +49,7 @@ export default function AboutSection({ onOpenBookingModal }: AboutProps) {
                 At <strong>Unique Dental Care</strong>, we believe dental treatments should be exceptionally precise, entirely customized, and absolutely pain-free. Led by the renowned cosmetic expert <strong>Dr. Mehul Hasti Babel</strong>, our boutique clinic is designed with ultra-premium standards to deliver a calming and high-end experience for all your aesthetic and dental desires.
               </p>
               <p>
-                As specialists in <strong>Luxury Dentistry & Advanced Cosmetic Procedures</strong>, we leverage modern technology alongside a refined aesthetic sense. Whether you require a life-changing <strong>Cosmetic Smile Makeover using ultra-thin porcelain veneers</strong>, computer-guided <strong>dental implant restorations</strong>, or a <strong>painless, single-sitting root canal treatment</strong>, we craft every solution with flawless precision.
+                As specialists in <strong>Laser Dentistry Specialist & Advanced Cosmetic Procedures</strong>, we leverage modern technology alongside a refined aesthetic sense. Whether you require a life-changing <strong>Cosmetic Smile Makeover using ultra-thin porcelain veneers</strong>, computer-guided <strong>dental implant restorations</strong>, or a <strong>painless, single-sitting root canal treatment</strong>, we craft every solution with flawless precision.
               </p>
               <p>
                 We maintain rigorous hospital-grade sterilization protocols, utilizing Class-B autoclaves and individually sealed sterile cassettes for every patient. Discover a sanctuary where clinical masterclass meets personalized artistic beauty.
