@@ -39,19 +39,19 @@ export default function TreatmentSection({ onOpenBookingModal }: TreatmentSectio
   return (
     <section id="treatments" className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-sm font-bold tracking-wider uppercase text-secondary font-inter text-[#00A8E8] block"
+            className="text-sm font-bold tracking-wider uppercase font-inter text-[#00A8E8] block" style={{ color: COLORS.secondary }}
           >
             CLINICAL DEPARTMENTS & PROCEDURES
           </motion.span>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -60,7 +60,7 @@ export default function TreatmentSection({ onOpenBookingModal }: TreatmentSectio
           >
             Advanced Clinical Solutions under One Roof
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -72,7 +72,7 @@ export default function TreatmentSection({ onOpenBookingModal }: TreatmentSectio
         </div>
 
         {/* Filter Badges */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -87,11 +87,10 @@ export default function TreatmentSection({ onOpenBookingModal }: TreatmentSectio
             <button
               key={category}
               onClick={() => handleCategorySelect(category)}
-              className={`px-4 py-2 rounded-full font-inter font-semibold text-xs transition-all duration-300 cursor-pointer border ${
-                selectedCategory === category
+              className={`px-4 py-2 rounded-full font-inter font-semibold text-xs transition-all duration-300 cursor-pointer border ${selectedCategory === category
                   ? "text-white shadow-md border-transparent"
                   : "bg-white text-slate-600 hover:bg-slate-50 border-slate-200"
-              }`}
+                }`}
               style={{
                 backgroundColor: selectedCategory === category ? COLORS.primary : undefined,
               }}

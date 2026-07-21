@@ -14,10 +14,10 @@ export default function TeamGrid() {
   return (
     <section id="team" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
-          <span className="text-sm font-bold tracking-wider uppercase font-inter bg-gradient-to-r from-[#00A8E8] to-[#005B96] bg-clip-text text-transparent">
+          <span className="text-sm font-bold tracking-wider uppercase font-inter" style={{ color: COLORS.secondary }}>
             CLINICAL SPECIALISTS & LEADERS
           </span>
           <h2 className="font-playfair font-bold text-3xl sm:text-4xl text-slate-900 leading-tight">

@@ -49,11 +49,11 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-900 text-slate-400 font-inter text-sm pt-16 border-t border-slate-800">
-      
+
       {/* 5-Column Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 border-b border-slate-800">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-8 lg:gap-12">
-          
+
           {/* Column 1: Brand (4 cols on lg) */}
           <div className="lg:col-span-4 space-y-5 text-left">
             <div className="flex items-center gap-2 cursor-pointer" onClick={handleScrollToHeader}>
@@ -68,7 +68,7 @@ export default function Footer() {
                   Unique Dental Care
                 </span>
                 <span className="block text-[9px] uppercase font-bold tracking-wider text-[#00A8E8]">
-                  Luxury & Cosmetic Dentistry
+                  Laser & Cosmetic Dentistry
                 </span>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function Footer() {
       {/* Redesigned Contact & Locations Section: Dual Columns with gold divider & interactive dual-pin map */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-b border-slate-800">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
-          
+
           {/* Left Block: Two Branch columns (6 cols on lg) */}
           <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
             <div>
@@ -193,10 +193,10 @@ export default function Footer() {
               <p className="text-xs text-slate-400 mb-6 max-w-md">
                 Walk in or schedule an appointment at either of our premium multi-specialty clinical centers in Mumbai.
               </p>
-              
+
               {/* Dual columns for Chembur & Mankhurd side-by-side on md+, stacked on mobile */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
-                
+
                 {/* Chembur Column */}
                 <div className="space-y-4 text-left pr-2">
                   <div className="flex items-center gap-2 border-b border-slate-800 pb-2">
@@ -205,7 +205,7 @@ export default function Footer() {
                       Chembur Branch
                     </h5>
                   </div>
-                  
+
                   {/* Address */}
                   <div className="flex items-start gap-3">
                     <MapPin size={16} className="text-[#005B96] mt-0.5 shrink-0" />
@@ -243,7 +243,7 @@ export default function Footer() {
                       Mankhurd Branch
                     </h5>
                   </div>
-                  
+
                   {/* Address */}
                   <div className="flex items-start gap-3">
                     <MapPin size={16} className="text-[#894600] mt-0.5 shrink-0" />
@@ -279,11 +279,11 @@ export default function Footer() {
               </span>
               <div className="flex gap-2">
                 <a href={branchesConfig[0].directionsUrl} target="_blank" rel="noopener noreferrer"
-                   className="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-[11px] transition-colors flex items-center gap-1 border border-slate-700/50">
+                  className="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-[11px] transition-colors flex items-center gap-1 border border-slate-700/50">
                   Chembur Map
                 </a>
                 <a href={branchesConfig[1].directionsUrl} target="_blank" rel="noopener noreferrer"
-                   className="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-[11px] transition-colors flex items-center gap-1 border border-slate-700/50">
+                  className="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-[11px] transition-colors flex items-center gap-1 border border-slate-700/50">
                   Mankhurd Map
                 </a>
               </div>
@@ -300,7 +300,7 @@ export default function Footer() {
 
       {/* Footer Bottom */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row items-center justify-between text-xs font-inter space-y-4 md:space-y-0">
-        
+
         {/* Left: Copyright */}
         <p className="text-slate-500">
           © {currentYear} Unique Dental Care. All rights reserved. Luxury Dentistry & Advanced Cosmetic Procedures.

@@ -20,7 +20,7 @@ export default function TechEquipment() {
   return (
     <section id="technology" className="py-20 bg-slate-50 overflow-hidden text-left">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
           <span className="text-sm font-bold tracking-wider uppercase font-inter text-[#00A8E8] block">
@@ -59,14 +59,14 @@ export default function TechEquipment() {
               >
                 {/* Left/Top: Image container */}
                 <div className="sm:w-2/5 relative overflow-hidden aspect-[16/10] sm:aspect-auto sm:min-h-[280px]">
-                  <img 
-                    src={tech.imageUrl} 
-                    alt={tech.title} 
+                  <img
+                    src={tech.imageUrl}
+                    alt={tech.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-95"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-slate-950/60 sm:from-transparent via-transparent to-transparent pointer-events-none" />
-                  
+
                   {/* Floating badge */}
                   <div className="absolute top-4 left-4 bg-slate-900/85 text-white text-[9px] uppercase tracking-wider font-bold px-2.5 py-1 rounded-full font-inter backdrop-blur-sm shadow border border-white/10 flex items-center gap-1.5 z-10">
                     <ShieldCheck size={12} className="text-emerald-400" weight="fill" />
@@ -90,7 +90,7 @@ export default function TechEquipment() {
                         </h3>
                       </div>
                     </div>
-                    
+
                     <p className="font-inter text-slate-500 text-xs sm:text-sm leading-relaxed">
                       {tech.clinicalUse}
                     </p>
