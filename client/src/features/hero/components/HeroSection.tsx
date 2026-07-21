@@ -260,6 +260,18 @@ function ClinicPanel({
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40" />
 
+      {/* Background */}
+      <motion.img
+        src={clinicImage}
+        alt={`${doctorName} clinic`}
+        className="absolute inset-0 w-full h-full object-cover"
+        animate={{
+          filter: isActive ? "blur(0px)" : "blur(5px)",
+          scale: isActive ? 1 : 1.05,
+        }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+      />
+
       {/* Doctor */}
       <motion.img
         src={doctorImage}
@@ -270,7 +282,6 @@ function ClinicPanel({
         }}
         className={`absolute bottom-0 ${side === "left" ? "right-10" : "left-10"} h-[90%] object-contain`}
       />
-
       {/* Info card */}
       <div
         className={`absolute bottom-6 ${side === "left" ? "left-6" : "right-6"} bg-white rounded-2xl p-5`}
@@ -321,7 +332,7 @@ function ClinicShowcase() {
         cardContent={
           <>
             <h3 className="text-xl font-bold text-slate-900">
-              Dr. Saloni Mehul Hasti
+              Dr. Saloni Mehul Babel
             </h3>
             <p className="text-gray-600 mt-2">Family & Cosmetic Dentist</p>
 
